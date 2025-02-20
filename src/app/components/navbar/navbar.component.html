@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li class="logo">
+            <a href="#inicio">
+                <img src="assets/logo/WhiteDinamicaLogo.png" alt="Dinamica Logo">
+            </a>
+        </li>
+
+        <li class="burger" (click)="toggleMenu()"> 
+            <i class="material-icons">{{isMenuOpen ? 'close' : 'menu'}}</i>
+        </li>
+
+        <li class="menu" [class.is-open]="isMenuOpen">
+            <a href="#inicio" class="menu-item" (click)="toggleMenu()">Início</a>
+            <a href="#" class="menu-item">Sobre a Dinâmica</a>
+            <a href="#" class="menu-item">Serviços</a>
+            <a href="#" class="menu-item">Contato</a>
+            <a href="#" class="menu-item">Agende uma Consulta</a>
+        </li>
+    </ul>
+</nav>
