@@ -1,21 +1,25 @@
 <nav>
-    <ul>
-        <li class="logo">
-            <a href="#inicio">
-                <img src="assets/logo/WhiteDinamicaLogo.png" alt="Dinamica Logo">
-            </a>
-        </li>
 
-        <li class="burger" (click)="toggleMenu()"> 
-            <i class="material-icons">{{isMenuOpen ? 'close' : 'menu'}}</i>
-        </li>
-
-        <li class="menu" [class.is-open]="isMenuOpen">
-            <a href="#inicio" class="menu-item" (click)="toggleMenu()">Início</a>
-            <a href="#" class="menu-item">Sobre a Dinâmica</a>
-            <a href="#" class="menu-item">Serviços</a>
-            <a href="#" class="menu-item">Contato</a>
-            <a href="#" class="menu-item">Agende uma Consulta</a>
-        </li>
+    <img src="assets/logo/WhiteDinamicaLogo.png" alt="Dinâmica" loading="lazy" class="logo">
+    <ul *ngIf="!isMobile" class="desktop-menu">
+      <li class="menu-item"><a href="#inicio">Início</a></li>
+      <li class="menu-item"><a href="#sobre">Sobre a Dinâmica</a></li>
+      <li class="menu-item"><a href="#servicos">Serviços</a></li>
+      <li class="menu-item"><a href="#contato">Contato</a></li>
+      <li class="menu-item"><a href="#agendar">Agende uma Consulta</a></li>
     </ul>
-</nav>
+  
+    <ul *ngIf="isMobile">
+      <li class="burger" (click)="toggleMenu()">
+        <i class="material-icons">{{ isMenuOpen ? 'close' : 'menu' }}</i>
+      </li>
+  
+      <li class="menu" [class.is-open]="isMenuOpen">
+        <a href="#inicio" class="mobile-item" (click)="toggleMenu()">Início</a>
+        <a href="#sobre" class="mobile-item" (click)="toggleMenu()">Sobre a Dinâmica</a>
+        <a href="#servicos" class="mobile-item" (click)="toggleMenu()">Serviços</a>
+        <a href="#contato" class="mobile-item" (click)="toggleMenu()">Contato</a>
+        <a href="#agendar" class="mobile-item" (click)="toggleMenu()">Agende uma Consulta</a>
+      </li>
+    </ul>
+  </nav>
