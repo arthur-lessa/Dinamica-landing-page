@@ -7,6 +7,11 @@ nav {
     background-color: rgb(88, 84, 84);
     padding: 0 20px;
     height: 140px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
 
     .logo {
         height: 150px !important;
@@ -48,6 +53,7 @@ nav {
         color: #fff;
         display: flex;
         align-items: center;
+        margin-right: 50px !important;
     }
 
     .menu {
@@ -62,13 +68,18 @@ nav {
         background: rgb(58, 56, 56);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         color: #fff;
-        transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
-    
+        transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+
         &.is-open {
+            display: flex;
             max-height: 500px; 
             opacity: 1;
+            transform: translateY(0);
         }
-    
+
         .mobile-item {
             all: unset;
             padding-left: 20px;
@@ -79,7 +90,8 @@ nav {
             line-height: 50px;
             cursor: pointer !important;
             transition: color 0.3s ease;
-    
+            border-bottom: 1px solid rgb(141, 137, 137);
+
             &:hover {
                 color: rgb(89, 223, 49);
             }
