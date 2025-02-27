@@ -26,4 +26,8 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 }

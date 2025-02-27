@@ -1,25 +1,31 @@
 <nav>
 
-    <img src="assets/logo/WhiteDinamicaLogo.png" alt="Dinâmica" loading="lazy" class="logo">
-    <ul *ngIf="!isMobile" class="desktop-menu">
-      <li class="menu-item"><a href="#inicio">Início</a></li>
-      <li class="menu-item"><a href="#sobre">Sobre a Dinâmica</a></li>
-      <li class="menu-item"><a href="#servicos">Serviços</a></li>
-      <li class="menu-item"><a href="#contato">Contato</a></li>
-      <li class="menu-item"><a href="#agendar">Agende uma Consulta</a></li>
-    </ul>
-  
-    <ul *ngIf="isMobile">
-      <li class="burger" (click)="toggleMenu()">
-        <i class="material-icons">{{ isMenuOpen ? 'close' : 'menu' }}</i>
-      </li>
-  
-      <li class="menu" [class.is-open]="isMenuOpen">
-        <a href="#inicio" class="mobile-item" (click)="toggleMenu()">Início</a>
-        <a href="#sobre" class="mobile-item" (click)="toggleMenu()">Sobre a Dinâmica</a>
-        <a href="#servicos" class="mobile-item" (click)="toggleMenu()">Serviços</a>
-        <a href="#contato" class="mobile-item" (click)="toggleMenu()">Contato</a>
-        <a href="#agendar" class="mobile-item" (click)="toggleMenu()">Agende uma Consulta</a>
-      </li>
-    </ul>
-  </nav>
+  <img 
+  src="assets/logo/WhiteDinamicaLogo.png" 
+  alt="Dinâmica" 
+  loading="lazy" 
+  class="logo"
+  (click)="scrollToTop()">
+
+  <ul *ngIf="!isMobile" class="desktop-menu">
+    <li class="menu-item"><a (click)="scrollToTop()">Início</a></li>
+    <li class="menu-item"><a href="#sobre">Sobre a Dinâmica</a></li>
+    <li class="menu-item"><a href="#servicos">Serviços</a></li>
+    <li class="menu-item"><a href="#contato">Contato</a></li>
+    <li class="menu-item"><a href="#agendar">Agende uma Consulta</a></li>
+  </ul>
+
+  <ul *ngIf="isMobile">
+    <li class="burger" (click)="toggleMenu()">
+      <i class="material-icons">{{ isMenuOpen ? 'close' : 'menu' }}</i>
+    </li>
+
+    <li class="menu" [class.is-open]="isMenuOpen">
+      <a class="mobile-item" (click)="toggleMenu(); scrollToTop()">Início</a>
+      <a href="#sobre" class="mobile-item" (click)="toggleMenu()">Sobre a Dinâmica</a>
+      <a href="#servicos" class="mobile-item" (click)="toggleMenu()">Serviços</a>
+      <a href="#contato" class="mobile-item" (click)="toggleMenu()">Contato</a>
+      <a href="#agendar" class="mobile-item" (click)="toggleMenu()">Agende uma Consulta</a>
+    </li>
+  </ul>
+</nav>

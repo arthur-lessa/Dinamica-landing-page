@@ -4,7 +4,12 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
 
 html, body {
-    padding: 0;
+    height: 100%;
     margin: 0;
-    background-color: black;
+    padding: 0;
+    background: linear-gradient(90deg, #01030b, #0a162a 80%)
+}
+
+.pad-70 {
+    padding: 0 70px;
 }

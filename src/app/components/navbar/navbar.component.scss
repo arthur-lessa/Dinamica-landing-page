@@ -4,9 +4,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(88, 84, 84);
+    background-color: #1a2d4c;
     padding: 0 20px;
-    height: 140px;
+    height: 160px;
     position: fixed; 
     top: 0;
     left: 0;
@@ -16,6 +16,17 @@ nav {
     .logo {
         height: 150px !important;
         width: 150px !important;
+        transition: transform 0.4s ease-in-out; 
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            height: 120px !important;
+            width: 120px !important;            
+        }
     }
 
     .desktop-menu {
@@ -28,6 +39,7 @@ nav {
 
         .menu-item {
             a {
+                cursor: pointer;
                 text-decoration: none;
                 color: inherit;
                 font-size: 1.2rem;
@@ -35,7 +47,7 @@ nav {
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: rgb(89, 223, 49);
+                    color: #bac3cc;
                 }
             }
         }
@@ -62,7 +74,7 @@ nav {
         overflow: hidden;
         flex-direction: column;
         position: absolute;
-        top: 140px;
+        top: 160px;
         left: 0;
         width: 100%;
         background: rgb(58, 56, 56);
@@ -90,11 +102,20 @@ nav {
             line-height: 50px;
             cursor: pointer !important;
             transition: color 0.3s ease;
-            border-bottom: 1px solid rgb(141, 137, 137);
+            background-color: #274272;
+            border-bottom: 1px solid #fff;
 
             &:hover {
-                color: rgb(89, 223, 49);
+                color: #bac3cc;
             }
         }
+
+        @media screen and (max-width: 1100px) {
+            top: 150px !important;            
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        height: 150px;           
     }
 }
