@@ -1,12 +1,11 @@
 <nav>
 
-  <a href="" (click)="scrollToTop()">
-    <img 
-    src="assets/logo/WhiteDinamicaLogo.png" 
-    alt="Dinâmica" 
-    loading="lazy"
-    class="logo">
-  </a>
+  <img 
+  src="assets/logo/WhiteDinamicaLogo.png" 
+  alt="Dinâmica" 
+  loading="lazy" 
+  class="logo"
+  (click)="scrollToTop()">
 
   <ul *ngIf="!isMobile" class="desktop-menu">
     <li class="menu-item"><a (click)="scrollToTop()" href="">Início</a></li>
@@ -22,7 +21,7 @@
     </li>
 
     <li class="menu" [class.is-open]="isMenuOpen">
-      <a class="mobile-item" (click)="toggleMenu(); scrollToTop()" href="">Início</a>
+      <a class="mobile-item" (click)="toggleMenu(); scrollToTop()">Início</a>
       <a href="#sobre" class="mobile-item" (click)="toggleMenu()">Sobre a Dinâmica</a>
       <a href="#servicos" class="mobile-item" (click)="toggleMenu()">Serviços</a>
       <a href="#contato" class="mobile-item" (click)="toggleMenu()">Contato</a>

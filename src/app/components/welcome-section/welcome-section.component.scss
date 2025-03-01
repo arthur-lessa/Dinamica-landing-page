@@ -1,10 +1,24 @@
 .welcome{
+    height: calc(100vh - 160px);
     font-family: 'Poppins';
     margin-top: 200px;
     color: #fff !important;
     font-size: 20px !important;
     display: flex;
+    justify-content: flex;
     flex-direction: row;
+
+    .initial-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    p{
+        margin: 8px 0;
+        width: 100%;
+    }
 
     b{
         color: #6c90c3 !important;
@@ -18,7 +32,6 @@
         img{
             height: 450px;
             width: 450px;
-            margin: 20px;
         }
     }
 
@@ -32,8 +45,8 @@
 
     @media screen and (max-width: 1030px){
         flex-direction: column;
-        align-items: center;
-        margin-top: 170px;
+        align-items: center;    
+        height: 100vh !important;
 
         h2{
             text-align: center;

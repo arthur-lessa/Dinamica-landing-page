@@ -4,6 +4,7 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
 
 html, body {
+    scroll-behavior: smooth;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -12,4 +13,8 @@ html, body {
 
 .pad-70 {
     padding: 0 70px;
+}
+
+.adjust-top {
+    height: calc(100vh + 160px);
 }

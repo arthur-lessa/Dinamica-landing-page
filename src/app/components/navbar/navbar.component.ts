@@ -11,7 +11,6 @@ export class NavbarComponent {
 
   isMobile: boolean = window.innerWidth < 1100;
   isMenuOpen: boolean = false;
-
   
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -27,7 +26,6 @@ export class NavbarComponent {
   }
 
   scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top: 0});
   }
-
 }

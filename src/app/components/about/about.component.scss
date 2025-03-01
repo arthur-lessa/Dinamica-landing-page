@@ -1,0 +1,74 @@
+.about{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    height: calc(100vh - 160px) !important;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2{
+        margin: 50px 0;
+        font-size: 3rem;
+        text-align: center;
+
+        @media screen and (max-width: 1100px){
+            font-size: 18px;            
+        }
+    }
+
+    img {
+        width: 350px !important;
+        height: auto;
+
+        @media screen and (max-width: 1100px){
+            width: 200px !important;            
+        }
+    }
+
+    .dinamica-content{
+        padding: 0px 70px;
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+        align-items: center;
+        flex-direction: row;
+
+        .dinamica-logo{
+            width: 300px !important;
+            height: 300px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);    
+    
+            @media screen and (max-width: 1100px){
+                width: 200px !important;
+                height: 200px;
+            }
+        }
+
+        p{
+            margin: 0;
+            font-size: 1.5rem;
+            text-align: justify;
+
+            b{
+                color: #6c90c3 !important;
+            }
+
+            @media screen and (max-width: 1100px){
+                font-size: 13px !important;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 1100px){
+            flex-direction: column;
+            gap: 50px;
+            
+        }
+    }    
+}
