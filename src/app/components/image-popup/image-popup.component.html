@@ -1,0 +1,27 @@
+<header>
+    <h2>Joaquim Delfino</h2>
+</header>
+<!-- <div [ngClass]="isMobile ? 'mobile-content' : 'content'"> -->
+<div class="content">
+    
+    <div [ngClass]="isMobile ? 'mobile-info' : 'info'">
+        <div [ngClass]="isMobile ? 'complementary-mobile-info' : 'complementary-info'">
+            <p>12 anos de experiência com contratos de concessões rodoviárias.</p>
+            <p>Natural do interior do Paraná, atualmente morador da cidade de São Paulo, porém, flamenguista!</p>
+            <p>Bacharel em direito, com especialização em Direito do Trabalho.</p>
+        </div>
+        <div [ngClass]="isMobile ? 'ceo-mobile-image' : 'ceo-image'">
+            <img 
+            [src]="isMobile ? 'assets/img/Joaquim5.jpg' : 'assets/img/Joaquim4.jpg'" 
+            alt="Joaquim Delfino"
+            loading="eager">
+        </div>
+        <div [ngClass]="isMobile ? 'complementary-mobile-info' : 'complementary-info'">
+            <p>Ex-professor do ensino superior, lecionando matérias como Auditoria em Contratos e Legislação.</p>
+            <p>Gosta de pescar, e apreciar boas leituras.</p>
+            <p>Muito curioso, sempre disposto a aprender novas coisas e buscando novos conhecimentos.</p>
+        </div>
+    </div>
+
+    <button (click)="close()">Fechar</button>
+</div>

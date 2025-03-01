@@ -3,12 +3,12 @@
   <img 
   src="assets/logo/WhiteDinamicaLogo.png" 
   alt="Dinâmica" 
-  loading="lazy" 
+  loading="eager" 
   class="logo"
   (click)="scrollToTop()">
 
   <ul *ngIf="!isMobile" class="desktop-menu">
-    <li class="menu-item"><a (click)="scrollToTop()" href="">Início</a></li>
+    <li class="menu-item"><a (click)="scrollToTop()">Início</a></li>
     <li class="menu-item"><a href="#sobre">Sobre a Dinâmica</a></li>
     <li class="menu-item"><a href="#servicos">Serviços</a></li>
     <li class="menu-item"><a href="#contato">Contato</a></li>

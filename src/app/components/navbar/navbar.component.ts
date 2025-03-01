@@ -9,6 +9,8 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
 
+  ngOnInit() {}
+
   isMobile: boolean = window.innerWidth < 1100;
   isMenuOpen: boolean = false;
   
