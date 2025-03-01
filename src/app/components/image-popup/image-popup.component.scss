@@ -1,14 +1,15 @@
 * {
     font-family: 'Poppins', sans-serif;
+    font-weight: 700 !important;
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #959bb5 !important;
+    background-color: #344d75 !important;
     height: 60px;
-    color: black;   
+    color: white;   
 }
 
 
@@ -23,6 +24,10 @@ header {
 
         .complementary-info {
             text-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             gap: 20px;
         }
 
@@ -44,12 +49,17 @@ header {
                 }
             }
         }       
-    }
+    }    
+}
+
+.mobile-content{
+    padding: 20px !important;
+    overflow-y: scroll;
 
     .mobile-info {
         padding: 20px;
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        display: flex;
+        flex-direction: column;
 
         .complementary-mobile-info {
             text-align: start;
@@ -57,9 +67,7 @@ header {
         }
 
         .ceo-mobile-image {
-            border: 1px red solid;
             border-radius: 10px;
-            width: 100% !important;
             height: fit-content;
             display: flex;
             justify-content: center;
@@ -67,21 +75,11 @@ header {
 
             img {
                 border-radius: 10px;
-                width: 300px;
-                height: auto;
-    
-                @media screen and (max-width: 1100px) {
-                    width: 200px;                    
-                }
+                width: 300px !important;
+                height: auto;             
             }        
         }    
     }
-
-    
-}
-
-.mobile-content{
-    border: 1px red solid;
 }
 
 button{
@@ -89,6 +87,17 @@ button{
     height: 40px !important;
     border-radius: 5px !important;
     font-size: 20px !important;
+}
+
+footer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    button{
+        background-color: #0a162a;
+        color: white;
+    }
 }
 
 ::ng-deep .mat-mdc-dialog-surface {

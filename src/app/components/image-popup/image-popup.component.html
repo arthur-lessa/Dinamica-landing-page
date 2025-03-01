@@ -1,8 +1,7 @@
 <header>
     <h2>Joaquim Delfino</h2>
 </header>
-<!-- <div [ngClass]="isMobile ? 'mobile-content' : 'content'"> -->
-<div class="content">
+<div [ngClass]="isMobile ? 'mobile-content' : 'content'">
     
     <div [ngClass]="isMobile ? 'mobile-info' : 'info'">
         <div [ngClass]="isMobile ? 'complementary-mobile-info' : 'complementary-info'">
@@ -22,6 +21,8 @@
             <p>Muito curioso, sempre disposto a aprender novas coisas e buscando novos conhecimentos.</p>
         </div>
     </div>
-
-    <button (click)="close()">Fechar</button>
 </div>
+
+<footer>
+    <button (click)="close()">Fechar</button>
+</footer>
