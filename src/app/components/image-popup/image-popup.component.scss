@@ -9,7 +9,7 @@ header {
     align-items: center;
     background-color: #344d75 !important;
     height: 60px;
-    color: white;   
+    color: white;
 }
 
 
@@ -28,12 +28,17 @@ header {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            gap: 20px;
+
+            ul {
+                display: flex;
+                flex-direction: column !important;
+                gap: 40px;
+            }
         }
 
         .ceo-image {
             padding: 0 10px;
-            display: flex;      
+            display: flex;
             justify-content: center;
             align-items: center;
 
@@ -41,18 +46,18 @@ header {
                 border-radius: 10px;
                 width: 300px;
                 height: 450px;
-    
+
                 @media screen and (max-width: 1100px) {
                     width: 200px;
                     height: 300px;
-                    
+
                 }
             }
-        }       
-    }    
+        }
+    }
 }
 
-.mobile-content{
+.mobile-content {
     padding: 20px !important;
     overflow-y: scroll;
 
@@ -76,25 +81,25 @@ header {
             img {
                 border-radius: 10px;
                 width: 300px !important;
-                height: auto;             
-            }        
-        }    
+                height: auto;
+            }
+        }
     }
 }
 
-button{
-    cursor: pointer !important; 
+button {
+    cursor: pointer !important;
     height: 40px !important;
     border-radius: 5px !important;
     font-size: 20px !important;
 }
 
-footer{
+footer {
     padding: 10px;
     display: flex;
     justify-content: center;
 
-    button{
+    button {
         background-color: #0a162a;
         color: white;
     }
@@ -102,6 +107,20 @@ footer{
 
 ::ng-deep .mat-mdc-dialog-surface {
     padding: 0 !important;
-    border-radius: 10px !important;    
+    border-radius: 10px !important;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 0.5s ease-out forwards;
+}
 
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
