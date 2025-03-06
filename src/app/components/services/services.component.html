@@ -1,20 +1,18 @@
-<section class="services-container">
-    <div class="service-card">
-        <h3>Contratos</h3>    
-        <img src="assets/img/contratos.png" alt="Contratos" loading="eager">
-        <p>
-            A base de qualquer relação comercial ou empresarial está em contratos bem elaborados. 
-            Nosso escritório atua na <strong>redação, revisão e análise de contratos</strong>, garantindo que todos 
-            os termos sejam claros, equilibrados e alinhados aos interesses das partes envolvidas.
-        </p>
-        <ul>
-            <li><mat-icon>edit_document</mat-icon> <strong>Elaboração personalizada:</strong> Criamos contratos sob medida, adaptados às necessidades do seu negócio.</li>
-            <li><mat-icon>gavel</mat-icon> <strong>Revisão e adequação:</strong> Identificamos cláusulas abusivas ou riscos jurídicos, protegendo você de possíveis litígios.</li>
-            <li><mat-icon>handshake</mat-icon> <strong>Negociação estratégica:</strong> Auxiliamos na negociação de termos contratuais para garantir segurança e benefícios aos nossos clientes.</li>
-        </ul>
-        <p>
-            Seja para contratos comerciais, prestação de serviços, parcerias ou qualquer outro tipo de acordo, nossa equipe está pronta para oferecer <strong>segurança jurídica e tranquilidade</strong> para você e sua empresa.
-        </p>
-        <p><mat-icon>phone</mat-icon> <strong>Entre em contato e proteja seus negócios com contratos bem estruturados.</strong></p>
+<section class="services-container pad-70" id="servicos">
+    <h3>Serviços oferecidos pela Dinâmica</h3>
+    <div class="cards">                
+        <app-service-card
+        [imgSrc]="'assets/img/assessoria.png'"
+        [imgAlt]="'Assessoria'"
+        [cardTitle]="'Assessoria'"
+        [cardText]="assessoriaText"
+        ></app-service-card>
+
+        <app-service-card
+        [imgSrc]="'assets/img/contratos.png'"
+        [imgAlt]="'Contratos'"
+        [cardTitle]="'Contratos'"
+        [cardText]="contratosText"
+        ></app-service-card>
     </div>
 </section>

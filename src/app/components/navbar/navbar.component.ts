@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -9,17 +10,23 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
 
-  ngOnInit() {}
-
-  isMobile: boolean = window.innerWidth < 1100;
+  isMobile: boolean = false;
   isMenuOpen: boolean = false;
-  
+
+  constructor(@Inject(PLATFORM_ID) private platformId: object) { }
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth < 1100;
+    }
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isMobile = (event.target as Window).innerWidth < 1100;
 
     if (!this.isMobile) {
-      this.isMenuOpen = false;    
+      this.isMenuOpen = false;
     }
   }
 
@@ -28,6 +35,6 @@ export class NavbarComponent {
   }
 
   scrollToTop() {
-    window.scrollTo({top: 0});
+    window.scrollTo({ top: 0 });
   }
 }

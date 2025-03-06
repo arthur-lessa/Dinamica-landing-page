@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { ImagePopupComponent } from '../image-popup/image-popup.component';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-about',
@@ -13,11 +14,15 @@ export class AboutComponent {
   viewPort: number = 0;
   isMobile: boolean = false;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    public dialog: MatDialog,) { }
 
   ngOnInit() {
-    this.viewPort = window.innerWidth;
-    this.isMobile = this.viewPort < 1100;
+    if (isPlatformBrowser(this.platformId)) {
+      this.viewPort = window.innerWidth;
+      this.isMobile = this.viewPort < 1100;
+    }
   }
 
   public openDialog(): void {
