@@ -4,7 +4,7 @@
 
 .card {
     border-radius: 20px;
-    background-color: #959bb5;
+    background-color: #6c90c3;
     padding: 20px !important;
     width: 400px !important;
     height: 600px;
@@ -34,6 +34,11 @@
         }
 
         .text {
+
+            h3 {
+                margin: 10px 0 !important;
+            }
+
             color: #0a1123 !important;
             display: flex;
             flex-direction: column;
@@ -45,7 +50,7 @@
 
     @media screen and (max-width: 1100px) {
         width: 300px !important;
-        height: 500px;
+        height: 450px;
 
         .card-content {
 
@@ -57,11 +62,11 @@
 
             .text{
                 h3 {
-                    font-size: 20px !important;
+                    font-size: 18px !important;
                 }
 
                 p {
-                    font-size: 15px !important;
+                    font-size: 13px !important;
                 }
             }
         }

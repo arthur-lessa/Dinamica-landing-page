@@ -3,6 +3,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { WelcomeSectionComponent } from '../welcome-section/welcome-section.component';
 import { AboutComponent } from '../about/about.component';
 import { ServicesComponent } from '../services/services.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ import { ServicesComponent } from '../services/services.component';
     WelcomeSectionComponent, 
     AboutComponent,
     ServicesComponent,
+    ContactComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
