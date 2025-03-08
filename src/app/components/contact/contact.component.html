@@ -1,12 +1,13 @@
-<section class="contact pad-70">
-    <h3>Entre em Contato!</h3>
+<section class="contact pad-70" id="contato">
+    <h3>Entre em Contato</h3>
     <div class="contact-buttons">
         <div class="button" *ngFor="let contact of contacts">
             <app-contact-button
                 [contactImgSrc]="contact.contactImgSrc"
                 [contactImgAlt]="contact.contactImgAlt"
                 [contactTitle]="contact.contactTitle"
-                [buttonClass]="contact.buttonClass">
+                [buttonClass]="contact.buttonClass"
+                (click)="onContactClick(contact)">
             </app-contact-button>
         </div>
     </div>

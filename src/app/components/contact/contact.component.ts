@@ -15,7 +15,7 @@ export class ContactComponent {
       contactTitle: 'Instagram',
       contactImgSrc: 'assets/icons/instagram.svg',
       contactImgAlt: 'Instagram',
-      buttonClass: 'instagram'
+      buttonClass: 'instagram',
     },
     {
       contactTitle: 'Email',
@@ -31,7 +31,18 @@ export class ContactComponent {
     },
   ];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  onContactClick(contact: any) {   
+
+    if (contact.contactTitle === 'Instagram') {
+        window.open('https://www.instagram.com/dinamicacontratos', '_blank');
+    } else if (contact.contactTitle === 'Email') {
+        window.location.href = 'mailto:thurlessaf@gmail.com';
+    } else if (contact.contactTitle === 'WhatsApp') {
+        window.open('https://wa.me/5511956788884', '_blank');
+    }
+  }
 }
