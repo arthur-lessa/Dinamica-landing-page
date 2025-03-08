@@ -5,8 +5,8 @@
 .card {
     border-radius: 20px;
     background-color: #6c90c3;
-    width: 400px !important;
-    height: fit-content;
+    width: 600px !important;
+    height: 550px;
     display: flex;
     flex-direction: column;
     display: flex;
@@ -48,6 +48,31 @@
             align-items: center;
 
         }
+    }
+
+    @media screen and (max-width: 1500px) {
+        width: 450px !important;
+        height: 600px;
+
+        .card-content {
+
+            .image {
+                img {
+                    width: 300px;
+                }
+            }
+
+            .text{
+                h3 {
+                    font-size: 24px !important;
+                }
+
+                p {
+                    font-size: 16px !important;
+                }
+            }
+        }
+        
     }
 
     @media screen and (max-width: 1100px) {

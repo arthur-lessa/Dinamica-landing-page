@@ -42,7 +42,7 @@ export class ContactComponent {
     } else if (contact.contactTitle === 'Email') {
         window.location.href = 'mailto:thurlessaf@gmail.com';
     } else if (contact.contactTitle === 'WhatsApp') {
-        window.open('https://wa.me/5511956788884', '_blank');
+        window.open('https://wa.link/l7n7wz', '_blank');
     }
   }
 }

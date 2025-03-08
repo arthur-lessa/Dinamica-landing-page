@@ -1,11 +1,11 @@
 .contact{
-    height: calc(100vh - 160px);
+    height: 80vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 100px;
     align-items: center;    
     flex-direction: column;
     color: #fff !important;
-    scroll-margin-top: 160px;
 
     h3{
         text-align: center;

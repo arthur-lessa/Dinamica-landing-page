@@ -1,18 +1,23 @@
 <section class="services-container pad-70" id="servicos">
     <h3>Serviços oferecidos pela Dinâmica</h3>
-    <div class="cards">                
-        <app-service-card
-        [imgSrc]="'assets/img/assessoria.png'"
-        [imgAlt]="'Assessoria'"
-        [cardTitle]="'Assessoria'"
-        [cardText]="assessoriaText"
-        ></app-service-card>
+    <div class="cards">  
+        
+        <div class="card">
+            <app-service-card
+            [imgSrc]="'assets/img/assessoria.png'"
+            [imgAlt]="'Assessoria'"
+            [cardTitle]="'Assessoria'"
+            [cardText]="assessoriaText"
+            ></app-service-card>
+        </div>
 
-        <app-service-card
-        [imgSrc]="'assets/img/contratos.png'"
-        [imgAlt]="'Contratos'"
-        [cardTitle]="'Contratos'"
-        [cardText]="contratosText"
-        ></app-service-card>
+        <div class="card">
+            <app-service-card
+            [imgSrc]="'assets/img/contratos.png'"
+            [imgAlt]="'Contratos'"
+            [cardTitle]="'Contratos'"
+            [cardText]="contratosText"
+            ></app-service-card>
+        </div>
     </div>
 </section>
