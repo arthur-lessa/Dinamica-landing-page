@@ -11,6 +11,7 @@
         font-family: 'Poppins', serif;
         font-size: 48px ;
         color: white;
+        text-align: center;
     }
 
     @media screen and (max-width: 1100px){
@@ -22,7 +23,7 @@
     .cards{
         width: 100%;
         display: flex;
-        justify-content: space-between !important;
+        justify-content: space-around !important;
         align-items: stretch !important;
         flex-direction: row;    
 
