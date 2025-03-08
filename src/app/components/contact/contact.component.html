@@ -1,17 +1,13 @@
 <section class="contact pad-70">
     <h3>Entre em Contato!</h3>
-    <div class="contact-cards">
-        <app-contact-button
-            [contactTitle]="'teste'"
-            [contactImgSrc]="'teste'"
-            [contactImgAlt]="'teste'">
-        </app-contact-button>
-         <!-- <ng-container *ngFor="let contact of contacts">
+    <div class="contact-buttons">
+        <div class="button" *ngFor="let contact of contacts">
             <app-contact-button
-                [contactImageSrc]="'teste'"
-                [contactImageAlt]="'teste'"
-                [contactTitle]="'teste'">
+                [contactImgSrc]="contact.contactImgSrc"
+                [contactImgAlt]="contact.contactImgAlt"
+                [contactTitle]="contact.contactTitle"
+                [buttonClass]="contact.buttonClass">
             </app-contact-button>
-         </ng-container> -->
+        </div>
     </div>
 </section>

@@ -15,7 +15,6 @@ export class ImagePopupComponent implements OnInit, OnDestroy{
   ngOnInit() {
     this.checkMobile();
     window.addEventListener('resize', this.checkMobile.bind(this));  
-    
   }  
   
   ngOnDestroy() {
