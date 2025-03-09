@@ -1,15 +1,15 @@
 .schedule-container {
-    height: calc(100vh - 160px);
     display: flex;
-    justify-content: space-around;
+    justify-content: center !important;
     align-items: center;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
+    scroll-margin-top: 160px !important;
+    gap: 90px !important;
 
     h3 {
         text-align: center;
         font-size: 48px;
-        margin: 50px !important;
         color: white;
 
         @media screen and (max-width: 1100px) {
@@ -24,6 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 160px;
 
         .schedule-content {
             padding: 20px;
@@ -77,22 +78,56 @@
             & .form {
                 display: flex;
                 justify-content: space-between;
-                gap: 60px !important;
-                flex-direction: row;
+                flex-direction: row;                
 
+                submit-button {
+                    margin-top: 10px !important;
+                }
+                
                 @media screen and (max-width: 1100px) {
                     flex-direction: column;
                     justify-content: center !important;
-                    gap: 20px !important;                    
+                    gap: 20px !important; 
+                    
+                    submit-button {
+                        margin-top: 0 !important;
+                    }
                 }
             }
         }
+
+        @media screen and (max-width: 1100px) {
+            margin-bottom: 100px !important;            
+        }
+
     }
+
+    @media screen and (max-width: 1100px) {
+        gap: 50px !important;
+    }
+
 }
 
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     border-radius: 15px !important;
     width: 450px !important;
+
+    @media screen and (min-width: 1600px) {
+        width: 550px !important;        
+    }
+
+    @media screen and (max-width: 1400px) {
+        width: 350px !important;
+        
+    }
+
+    @media screen and (max-width: 1325px) {
+        width: 300px !important;          
+    }
+
+    @media screen and (max-width: 1225px) {
+        width: 200px !important;                
+    }
 
     @media screen and (max-width: 1100px) {
         width: 100% !important;        

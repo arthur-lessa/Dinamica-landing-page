@@ -4,12 +4,19 @@ import {FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angula
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {merge} from 'rxjs';
+import { SubmitButtonComponent } from '../submit-button/submit-button.component';
 
 @Component({
   selector: 'app-schedule-appointment',
   templateUrl: './schedule-appointment.component.html',
   styleUrl: './schedule-appointment.component.scss',
-  imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    MatFormFieldModule, 
+    MatInputModule, 
+    FormsModule, 
+    ReactiveFormsModule,
+    SubmitButtonComponent
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScheduleAppointmentComponent {

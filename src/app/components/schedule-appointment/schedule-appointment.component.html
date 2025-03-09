@@ -1,4 +1,4 @@
-<section class="schedule-container pad-70">
+<section class="schedule-container pad-70" id="agendar">
     <h3>Agende uma Consulta</h3>
     <div class="schedule-card">
         <div class="schedule-content">
@@ -27,12 +27,12 @@
                     <input 
                     matInput
                     placeholder="Nome"
-                    [formControl]="name"
+                    formControlName="name"
                     (blur)="updateNameErrorMessage()"
                     required>
-                    @if (name.invalid) {
+                    <!-- @if (scheduleForm.controls['name'].invalid) {
                         <mat-error>{{nameErrorMessage()}}</mat-error>
-                    }
+                    } -->
                 </mat-form-field>
 
                 <mat-form-field>
@@ -40,14 +40,18 @@
                     <input
                       matInput
                       placeholder="email@email.com"
-                      [formControl]="email"
+                      formControlName="email"
                       (blur)="updateEmailErrorMessage()"
                       required
                     />
-                    @if (email.invalid) {
+                    <!-- @if (scheduleForm.controls['email'].invalid) {
                       <mat-error>{{emailErrorMessage()}}</mat-error>
-                    }
-                </mat-form-field>                               
+                    } -->
+                </mat-form-field>  
+
+                <submit-button 
+                btnText="Enviar e-mail">
+                </submit-button>  
             </div>
         </div>
     </div>
